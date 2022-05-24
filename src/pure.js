@@ -138,4 +138,5 @@ function renderHook (renderCallback, options) {
 
 // eslint-disable-next-line import/export
 export * from '@testing-library/dom'
+// eslint-disable-next-line import/export
 export { render, cleanup, act, fireEvent, renderHook }
