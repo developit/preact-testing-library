@@ -2,6 +2,7 @@ import { getQueriesForElement, prettyDOM, configure as configureDTL } from '@tes
 import { h, hydrate as preactHydrate, render as preactRender, createRef } from 'preact'
 import { useEffect } from 'preact/hooks'
 import { act } from 'preact/test-utils'
+import { fireEvent } from './fire-event'
 
 configureDTL({
   asyncWrapper: async cb => {
@@ -135,5 +136,6 @@ function renderHook (renderCallback, options) {
   return { result, rerender, unmount }
 }
 
+// eslint-disable-next-line import/export
 export * from '@testing-library/dom'
-export { render, cleanup, act, renderHook }
+export { render, cleanup, act, fireEvent, renderHook }
